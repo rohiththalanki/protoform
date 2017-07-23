@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+<title>SAMPLE</title>
+
+    <script>
+    window.onload = function(){
+    var image= document.getElementsByClassName('slide')[0];
+       console.log(image)
+    var i = 0;
+    var j=0;
+    setInterval(function(){
+
+    str = '<img src="./download.jpg"  style="width:'+i+'%;margin-left:'+i+'%;">'
+    console.log(str);
+    i= i + 1;j=j+10;
+       if(i>50){i=i%10;}
+    console.log(image.innerHTML)
+    image.innerHTML = str
+    },200);
+    }
+
+</script>
+
+</head>
+
+
+
+
+<body>
+
+<div class="header">
+    <ul style="">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Signup</a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
+</div>
+<br><br><br><br>
+<div  class="slide">
+
+
+
+</div>
+<br><br>
+<br><br>
+<br><br>
+<div id="content" style="text-align:center;color:red;padding:10%;border:1px solid #efefef;">
+    <h3>hello people!! welcome to the website...</h3>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROTOCOL</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+      var submit = document.getElementById("submit");
+      submit.addEventListener("click",function(){
+
+      var username = document.getElementById("username");
+        console.log(username);
+      var userdetail = username.value;
+      var regno = document.getElementById("reg-id");
+      var regdetails = regno.value;
+      var final = {
+      "name":userdetail,
+      "regno":regdetails
+      }
+console.log(final);
+ $.ajax({
+    type:"POST",
+    data:final,
+    url : "http://localhost:3000/",
+    success:function(data){
+    console.log(data);
+
+    }
+
+    })
+
+
+      });
+
+
+
+    });
+</script>
+</head>
+
+<body style="font-family:Courier New;font-size::20;" >
+    <div class="jumbotron jumbotron-fluid" style="background-color:#330033;background-image:url('45-degree-fabric-light.png');margin-bottom:0;">
+        <div class="container text-center">
+            <img src="logo.png" alt="logo" style="width:75%;">
+            <hr style="width:75%">
+            <p class="lead" style="color:white;">coming soon.</p>
+            <p class="lead" style="color:white;">form for registration for sessions...</p>
+        </div><!--container-->
+    </div><!--jumbatron-->
+
+  <section style="background-color:#f7f7f7;padding-top:2%;margin-bottom:0%;">
+     <div class="well" style="">
+         <form action="" class="form-horizontal" style="width:80%;padding:0 10%;margin-left:12%">
+             <div class="form-group">
+                 <label for="username">Name:</label>
+                 <input type="text" class="form-control" id="username" placeholder="Enter name" name="name">
+             </div>
+             <div class="form-group">
+                 <label for="reg-id">Register Number:</label>
+                 <input type="email" class="form-control" id="reg-id" placeholder="Enter reg.number" name="registration">
+             </div>
+             <div class="form-group">
+                 <label for="email">Email:</label>
+                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                 <span class="help-block">we'll never share your email with anyone else.</span>
+             </div>
+             <div class="form-group">
+                 <label for="mobile">Mobile Number:</label>
+                 <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile number" name="mobile">
+                 <span class="help-block">we'll never share your number with anyone else.</span>
+             </div>
+
+         </form>
+     </div>
+  </section><!--end of section-->
+
+   <div class="row row-eq-height" style="padding:10%;background-color:#f7f7f7;">
+       <div class="col-md-3">
+           <div class="panel panel-default" style="">
+               <div class="panel-heading">Networks</div>
+               <div class="panel-body">
+                   <p>
+                       Fascinated about how the internet works! Want to know how computers communicate with each other? Connect with us in the session to communicate with us and know how stuffs really works.
+                   </p>
+
+               </div>
+           </div>
+       </div>
+       <div class="col-md-3">
+           <div class="panel panel-default panel"style="">
+               <div class="panel-heading">Data Structures</div>
+               <div class=panel-body>
+                   <p>
+                       Behind every "successfull" code there is a proper data structure used. To know the making of the code, Join us lets catch it up together.
+                   </p>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-3">
+           <div class="panel panel-default">
+               <div class="panel-heading">DAA</div>
+               <div class=panel-body>
+                    <p>
+                   THe greatest frustration in any coding competition : TIMEOUTS ! Want to know why that happens? Eager to solve them ? Come let's analyse algorithms together.
+                    </p>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-3">
+           <div class="panel panel panel-default">
+               <div class="panel-heading">Web</div>
+                <div class=panel-body>
+                    <p>
+                        Tired of competitive coding ? Interested in designing cool webpagesw? There is always some magic that always web pages look so cool. To know more about the intricacies of web designs, buckle up for the session up together.
+                    </p>
+                </div>
+           </div>
+       </div>
+   </div>
+
+    <section style="background-color:#f7f7f7;padding-top:0%;margin-bottom:2%;">
+        <div class="well" style="">
+
+            <form action="" class="form-horizontal" style="width:80%;padding:0 10%;margin-left:12%;">
+                <div class="form-group">
+                    <label for="msessions" class="col-lg-4" style="">Morning Sessions:</label>
+                    <div class="col-lg-8">
+                        <select class="form-control" id="msessions">
+                            <option>None</option>
+                            <option>Data Structures</option>
+                            <option>Algorithms</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label for="asessions" class="col-lg-4">Evening Sessions:</label>
+                    <div class="col-lg-8">
+                        <select class="form-control" id="asessions">
+                            <option>None</option>
+                            <option>Networking</option>
+                            <option>Web</option>
+                        </select>
+                    </div>
+                    <br>
+                </div>
+                <div class="btn-group btn-group-lg" style="">
+                    <button type="button" class="btn btn-success" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section><!--end of section-->
+
+<footer class="footer" style="background-color:#330033;padding:2%;color:white;background-image:url('45-degree-fabric-light.png');">
+
+    <div class="container" style="color:white;text-align:center;padding:0%">
+        <h5>"powered by:"
+            <img class="img-thumbnail"src="favicon.ico" style="width:5%;padding:0%;"></h5>
+
+    </div>
+</footer>
+
+
+</body>

@@ -1,0 +1,16 @@
+.col-lg-3{
+padding:0 10%;
+border:1px solid #fff;}
+
+ul li a{
+text-decoration:none;
+padding:2px;
+
+ }
+ul li {
+float:left;display:block;
+padding:2px 2px;
+}
+.header{
+background-color:#330033;
+}
